@@ -5,9 +5,10 @@ import './App.css'
 
 function App() {
 
+  const contractAddress = '';
+
   // Variáveis de estado do componente
   const [defaultAccount, setDefaultAccount] = useState('');
-  const [contractAddress, setContractAddress] = useState('');
   const [newName, setNewName] = useState('');
   const [message, setMessage] = useState('');
 
@@ -51,12 +52,11 @@ function App() {
         <button className="btn" onClick={connect}>conectar</button> 
         &nbsp;&nbsp;&nbsp;Wallet: {defaultAccount}
       </h5>
-      <label>Contract Address:</label><br />
-      <input type="text" className="input" value={contractAddress || ''} onChange={evt => setContractAddress(evt.target.value)} />&nbsp;&nbsp;
+      <label>Contract Address: {contractAddress}</label><br />
       <button className="btn" onClick={hello}>Hello</button>
       <br /><br />
       <label>New Name:</label><br />
-      <input type="text" className="input" value={newName || ''} onChange={evt => setNewName(evt.target.value)} />&nbsp;&nbsp;
+      <input type="text" className="input" value={newName} onChange={evt => setNewName(evt.target.value)} />&nbsp;&nbsp;
       <button className="btn" onClick={whatIsYourName}>Enviar</button>
       <br /><br />
       <fieldset className="message">{message}</fieldset>
