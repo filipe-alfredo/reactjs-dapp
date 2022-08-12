@@ -11,6 +11,5 @@ contract HelloWorld {
 
     function whatIsYourName(string memory newName) public returns (string memory) {
         name = newName;
-        return "Name changed";
     }
 }

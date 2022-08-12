@@ -23,3 +23,14 @@ npm start
 ```
 
 ---
+
+## Comandos úteis
+
+#### Compile e realize o deploy dos Smart Contracts
+
+##### Dentro da pasta truffle execute o comando abaixo:
+```console
+truffle migrate --reset --compile-all
+```
+
+---
