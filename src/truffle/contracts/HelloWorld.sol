@@ -9,7 +9,7 @@ contract HelloWorld {
         return string(abi.encodePacked("Hello ", name));
     }
 
-    function whatIsYourName(string memory newName) public returns (string memory) {
+    function whatIsYourName(string memory newName) public {
         name = newName;
     }
 }
