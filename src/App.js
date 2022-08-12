@@ -12,7 +12,7 @@ function App() {
   const [message, setMessage] = useState('');
 
   // Criar o objeto web3 com o provider metamask e guarda a wallet
-  const setWallet = async () => {
+  const connect = async () => {
     setDefaultAccount(await web3.getAccount())
   }
 
@@ -48,7 +48,7 @@ function App() {
     <div>
       <h2> My first daap </h2>
       <h5>
-        <button className="btn" onClick={setWallet}>conectar</button> 
+        <button className="btn" onClick={connect}>conectar</button> 
         &nbsp;&nbsp;&nbsp;Wallet: {defaultAccount}
       </h5>
       <label>Contract Address:</label><br />
